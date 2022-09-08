@@ -1,0 +1,81 @@
+:root {
+	--lavender-blue: #bdbde2ff;
+	--nickel: #696c64ff;
+	--davys-grey: #575956ff;
+	--pale-spring-bud: #ededb8ff;
+	--tea-green: #c6f4c7ff;
+}
+
+html,
+body {
+	height: 100%;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+p {
+	font-size: 1.4rem;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 40px;
+
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: var(--nickel);
+
+	/* transform-style: preserve-3d; */
+}
+
+.box {
+	height: 200px;
+	width: 20%;
+	box-shadow: 10px 10px 10px var(--davys-grey);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.box-green {
+	background-color: var(--tea-green);
+	transform: rotate(10deg);
+}
+
+.box-yellow {
+	background-color: var(--pale-spring-bud);
+	transform: rotate(355deg);
+}
+
+.box-violet {
+	background-color: var(--lavender-blue);
+	transform: rotate(345deg);
+}
+
+.box:hover {
+	animation-name: translate-box;
+	animation-duration: 1s;
+	animation-delay: 0.2s;
+	animation-timing-function: ease-in-out;
+	/* animation-iteration-count: infinite; */
+}
+
+@keyframes translate-box {
+	from {
+		transform: none;
+	}
+
+	to {
+		transform: scale(1.5, 1.5);
+	}
+}
